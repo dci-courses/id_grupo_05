@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "suma"
+  site-url: "https://a.github.io/suma"
+  description: "a"
+  repo-branch: a
+  repo-url: "https://github.com/a/suma"
