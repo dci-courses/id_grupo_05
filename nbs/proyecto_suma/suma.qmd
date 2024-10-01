@@ -22,9 +22,10 @@ format: html
   let handPose;
   let video;
   let hands = [];
-  let currentSum = generateRandomSum();
 
   const sketch = (p) => {
+
+    let currentSum = generateRandomSum();
     
     p.preload = function() {
       // Load the handPose model
