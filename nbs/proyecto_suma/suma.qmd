@@ -25,7 +25,7 @@ format: html
 
   const sketch = (p) => {
 
-    let currentSum = generateRandomSum();
+    let currentSum;
     
     p.preload = function() {
       // Load the handPose model
@@ -35,6 +35,7 @@ format: html
     p.setup = function() {
       // Create a canvas and attach it to the 'canvas-container'
       p.createCanvas(640, 480).parent('canvas-container');
+      currentSum = generateRandomSum();
       // Create the webcam video and hide it
       video = p.createCapture(p.VIDEO);
       video.size(640, 480);
