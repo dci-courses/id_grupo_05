@@ -149,7 +149,7 @@ format: html
       document.getElementById('fingers-result').innerText = fingersRaised;
 
       if (fingersRaised === currentSum && !sumCorrect) {
-        sumCorrect = true; 
+        sumCorrect = true;
         
         document.getElementById('result-box').style.borderColor = 'green';
         document.getElementById('result-box').style.backgroundColor = 'lightgreen';
@@ -157,6 +157,7 @@ format: html
         setTimeout(() => {
           document.getElementById('result-box').style.borderColor = '#000';
           document.getElementById('result-box').style.backgroundColor = '#fff';
+          fingersRaised = currentSum;
           currentSum = generateRandomSum();
           document.getElementById('fingers-result').innerText = 0; 
           sumCorrect = false; 
