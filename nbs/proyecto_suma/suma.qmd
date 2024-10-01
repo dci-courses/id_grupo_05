@@ -1,5 +1,5 @@
 ---
-title: "Hand Pose Detection"
+title: "Suma con los dedos"
 format: html
 ---
 
@@ -156,10 +156,13 @@ format: html
         
         setTimeout(() => {
           document.getElementById('result-box').style.borderColor = '#000';
-          document.getElementById('result-box').style.backgroundColor = '#000';
-          currentSum = generateRandomSum(); 
+          document.getElementById('result-box').style.backgroundColor = '#fff';
+          currentSum = generateRandomSum();
+          document.getElementById('fingers-result').innerText = 0; 
           sumCorrect = false; 
         }, 2000);
+      } else {
+        document.getElementById('fingers-result').innerText = fingersRaised;
       }
 
     }
