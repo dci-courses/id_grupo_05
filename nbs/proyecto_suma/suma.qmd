@@ -27,10 +27,6 @@ format: html
 
   const sketch = (p) => {
 
-    let lastDetectionTime = 0; // Time when fingers were last detected
-    const detectionInterval = 1250; // Interval in milliseconds (1000 ms = 1 second)
-
-    
     p.preload = function() {
       // Load the handPose model
       handPose = ml5.handPose();
@@ -49,27 +45,20 @@ format: html
     };
 
     p.draw = function() {
-        // Draw the webcam video
-        p.image(video, 0, 0, p.width, p.height);
+      // Draw the webcam video
+      p.image(video, 0, 0, p.width, p.height);
 
-        // Draw all the tracked hand points
-        for (let i = 0; i < hands.length; i++) {
-            let hand = hands[i];
-            for (let j = 0; j < hand.keypoints.length; j++) {
-                let keypoint = hand.keypoints[j];
-                p.fill(0, 255, 0);
-                p.noStroke();
-                p.circle(keypoint.x, keypoint.y, 10);
-            }
+      // Draw all the tracked hand points
+      for (let i = 0; i < hands.length; i++) {
+        let hand = hands[i];
+        for (let j = 0; j < hand.keypoints.length; j++) {
+          let keypoint = hand.keypoints[j];
+          p.fill(0, 255, 0);
+          p.noStroke();
+          p.circle(keypoint.x, keypoint.y, 10);
         }
-
-        // Check if enough time has passed to detect fingers
-        if (p.millis() - lastDetectionTime > detectionInterval) {
-            lastDetectionTime = p.millis(); // Update last detection time
-            detectFingers(); // Call function to detect fingers
-        }
+      }
     };
-
 
     function generateRandomSum() {
       const num1 = Math.floor(Math.random() * 6); 
@@ -81,47 +70,51 @@ format: html
 
 
     // Callback function for when handPose outputs data
-    function detectFingers() {
-        if (hands[0] != undefined) {
-            let middle = verifyStretchedFinger(hands[0], 2);
-            let index = verifyStretchedFinger(hands[0], 1);
-            let thumb = verifyStretchedFinger(hands[0], 0);
-            let ring = verifyStretchedFinger(hands[0], 3);
-            let pinky = verifyStretchedFinger(hands[0], 4);
-            
-            let fingers = [middle, index, thumb, ring, pinky];
-            
-            fingersRaised(fingers);
-        }
+    function gotHands(results) {
 
-        if (hands[0] != undefined && hands[1] != undefined) {
-            let middle = verifyStretchedFinger(hands[0], 2);
-            let index = verifyStretchedFinger(hands[0], 1);
-            let thumb = verifyStretchedFinger(hands[0], 0);
-            let ring = verifyStretchedFinger(hands[0], 3);
-            let pinky = verifyStretchedFinger(hands[0], 4);
-            let middleR = verifyStretchedFinger(hands[1], 2);
-            let indexR = verifyStretchedFinger(hands[1], 1);
-            let thumbR = verifyStretchedFinger(hands[1], 0);
-            let ringR = verifyStretchedFinger(hands[1], 3);
-            let pinkyR = verifyStretchedFinger(hands[1], 4);
+      hands = results;
+      console.log(hands);
+  
+      if(hands[0] != undefined) {
+        let middle = verifyStretchedFinger(hands[0], 2);
+        let index = verifyStretchedFinger(hands[0], 1);
+        let thumb = verifyStretchedFinger(hands[0], 0);
+        let ring = verifyStretchedFinger(hands[0], 3);
+        let pinky = verifyStretchedFinger(hands[0], 4);
+        
             
-            let fingers = [middle, index, thumb, ring, pinky, middleR, indexR, thumbR, ringR, pinkyR];
-            
-            fingersRaised(fingers);
-        }
+        let fingers = [middle, index, thumb, ring, pinky];
+        
+        fingersRaised(fingers)
+      }
+  
+      if (hands[0] != undefined && hands[1] != undefined) {
+        let middle = verifyStretchedFinger(hands[0], 2);
+        let index = verifyStretchedFinger(hands[0], 1);
+        let thumb = verifyStretchedFinger(hands[0], 0);
+        let ring = verifyStretchedFinger(hands[0], 3);
+        let pinky = verifyStretchedFinger(hands[0], 4);
+        let middleR = verifyStretchedFinger(hands[1], 2);
+        let indexR = verifyStretchedFinger(hands[1], 1);
+        let thumbR = verifyStretchedFinger(hands[1], 0);
+        let ringR = verifyStretchedFinger(hands[1], 3);
+        let pinkyR = verifyStretchedFinger(hands[1], 4);
+        
+        let fingers = [middle, index, thumb, ring, pinky, middleR, indexR, thumbR, ringR, pinkyR];
+        
+        fingersRaised(fingers)
+      }
+  
+      if (hands[1] != undefined) {
+        let middleR = verifyStretchedFinger(hands[1], 2);
+        let indexR = verifyStretchedFinger(hands[1], 1);
+        let thumbR = verifyStretchedFinger(hands[1], 0);
+        let ringR = verifyStretchedFinger(hands[1], 3);
+        let pinkyR = verifyStretchedFinger(hands[1], 4);
 
-        if (hands[1] != undefined) {
-            let middleR = verifyStretchedFinger(hands[1], 2);
-            let indexR = verifyStretchedFinger(hands[1], 1);
-            let thumbR = verifyStretchedFinger(hands[1], 0);
-            let ringR = verifyStretchedFinger(hands[1], 3);
-            let pinkyR = verifyStretchedFinger(hands[1], 4);
-
-            let fingers = [middleR, indexR, thumbR, ringR, pinkyR];
-            
-            fingersRaised(fingers);
-        }
+        let fingers = [middleR, indexR, thumbR, ringR, pinkyR];
+      }
+  
     }
 
     function verifyStretchedFinger(hand, index) {
@@ -144,32 +137,39 @@ format: html
       }
     }
 
+    let recordingTimeout; // Variable to hold the timeout
+
     function fingersRaised(fingers) {
-      let fingersRaised = 0;
-      for (let i = 0; i < fingers.length; i++) {
-        if (fingers[i]) {
-          fingersRaised++;
-        }
-      }
-      document.getElementById('fingers-result').innerText = fingersRaised;
+        // Clear the previous timeout if it exists
+        clearTimeout(recordingTimeout);
 
-      if (fingersRaised === currentSum && !sumCorrect) {
-        sumCorrect = true; 
-        
-        document.getElementById('result-box').style.borderColor = 'green';
-        document.getElementById('result-box').style.backgroundColor = 'lightgreen';
-        
-        setTimeout(() => {
-          document.getElementById('result-box').style.borderColor = '#000';
-          document.getElementById('result-box').style.backgroundColor = '#fff';
-          currentSum = generateRandomSum();
-          document.getElementById('fingers-result').innerText = 0; 
-          sumCorrect = false; 
-        }, 2000);
-      } else {
-        document.getElementById('fingers-result').innerText = fingersRaised;
-      }
+        // Set a new timeout to record fingers raised after 1000 ms (1 second)
+        recordingTimeout = setTimeout(() => {
+            let fingersRaised = 0;
+            for (let i = 0; i < fingers.length; i++) {
+                if (fingers[i]) {
+                    fingersRaised++;
+                }
+            }
+            document.getElementById('fingers-result').innerText = fingersRaised;
 
+            if (fingersRaised === currentSum && !sumCorrect) {
+                sumCorrect = true;
+
+                document.getElementById('result-box').style.borderColor = 'green';
+                document.getElementById('result-box').style.backgroundColor = 'lightgreen';
+
+                setTimeout(() => {
+                    document.getElementById('result-box').style.borderColor = '#000';
+                    document.getElementById('result-box').style.backgroundColor = '#fff';
+                    currentSum = generateRandomSum();
+                    document.getElementById('fingers-result').innerText = 0; 
+                    sumCorrect = false; 
+                }, 2000);
+            } else {
+                document.getElementById('fingers-result').innerText = fingersRaised;
+            }
+        }, 1250); // Adjust this delay as needed
     }
 
     function calculateDistance(p1, p2) {
