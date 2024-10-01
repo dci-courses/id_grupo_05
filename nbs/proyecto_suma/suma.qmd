@@ -22,10 +22,12 @@ format: html
   let handPose;
   let video;
   let hands = [];
+  let currentSum;
+  let sumCorrect = false;
 
   const sketch = (p) => {
 
-    let currentSum;
+    
     
     p.preload = function() {
       // Load the handPose model
@@ -146,12 +148,17 @@ format: html
       }
       document.getElementById('fingers-result').innerText = fingersRaised;
 
-      if (fingersRaised === currentSum) {
-        document.getElementById('sum-box').style.borderColor = 'green';
-
+      if (fingersRaised === currentSum && !sumCorrect) {
+        sumCorrect = true; 
+        
+        document.getElementById('result-box').style.borderColor = 'green';
+        document.getElementById('result-box').style.backgroundColor = 'lightgreen';
+        
         setTimeout(() => {
-          document.getElementById('sum-box').style.borderColor = '#000';
+          document.getElementById('result-box').style.borderColor = '#000';
+          document.getElementById('result-box').style.backgroundColor = '#000';
           currentSum = generateRandomSum(); 
+          sumCorrect = false; 
         }, 2000);
       }
 
