@@ -137,39 +137,34 @@ format: html
       }
     }
 
-    let recordingTimeout; // Variable to hold the timeout
-
     function fingersRaised(fingers) {
-        // Clear the previous timeout if it exists
-        clearTimeout(recordingTimeout);
+      let fingersRaised = 0;
+      setTimeout(() => {
+        for (let i = 0; i < fingers.length; i++) {
+          if (fingers[i]) {
+            fingersRaised++;
+          }
+        }
+      }, 1250);
+      document.getElementById('fingers-result').innerText = fingersRaised;
 
-        // Set a new timeout to record fingers raised after 1000 ms (1 second)
-        recordingTimeout = setTimeout(() => {
-            let fingersRaised = 0;
-            for (let i = 0; i < fingers.length; i++) {
-                if (fingers[i]) {
-                    fingersRaised++;
-                }
-            }
-            document.getElementById('fingers-result').innerText = fingersRaised;
+      if (fingersRaised === currentSum && !sumCorrect) {
+        sumCorrect = true; 
+        
+        document.getElementById('result-box').style.borderColor = 'green';
+        document.getElementById('result-box').style.backgroundColor = 'lightgreen';
+        
+        setTimeout(() => {
+          document.getElementById('result-box').style.borderColor = '#000';
+          document.getElementById('result-box').style.backgroundColor = '#fff';
+          currentSum = generateRandomSum();
+          document.getElementById('fingers-result').innerText = 0; 
+          sumCorrect = false; 
+        }, 2000);
+      } else {
+        document.getElementById('fingers-result').innerText = fingersRaised;
+      }
 
-            if (fingersRaised === currentSum && !sumCorrect) {
-                sumCorrect = true;
-
-                document.getElementById('result-box').style.borderColor = 'green';
-                document.getElementById('result-box').style.backgroundColor = 'lightgreen';
-
-                setTimeout(() => {
-                    document.getElementById('result-box').style.borderColor = '#000';
-                    document.getElementById('result-box').style.backgroundColor = '#fff';
-                    currentSum = generateRandomSum();
-                    document.getElementById('fingers-result').innerText = 0; 
-                    sumCorrect = false; 
-                }, 2000);
-            } else {
-                document.getElementById('fingers-result').innerText = fingersRaised;
-            }
-        }, 1250); // Adjust this delay as needed
     }
 
     function calculateDistance(p1, p2) {
