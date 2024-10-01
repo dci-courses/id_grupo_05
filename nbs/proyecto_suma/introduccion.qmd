@@ -25,4 +25,4 @@ Levanta diferentes números de dedos y observa cómo la aplicación cuenta tus d
 
 ## ¿Listo para empezar?
 
-Dirígete a la siguiente página para comenzar con la aplicación de detección de manos y empieza a sumar con tus dedos: [Ir a la aplicación de sumas](nbs\proyecto_suma\suma.qmd)
+Dirígete a la siguiente página para comenzar con la aplicación de detección de manos y empieza a sumar con tus dedos: [Ir a la aplicación de sumas](suma.qmd)

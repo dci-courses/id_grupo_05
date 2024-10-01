@@ -13,7 +13,7 @@ A continuación, se muestra el contenido que ya hemos compilado en este libro. H
 
 ## Aplicacion para facilitar el aprendizaje de la suma para niños
 
-[Suma con las manos](nbs\proyecto_suma\suma.qmd)
+[Suma con las manos](proyecto_suma/suma.qmd)
 
 
  
