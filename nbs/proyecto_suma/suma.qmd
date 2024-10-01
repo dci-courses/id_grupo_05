@@ -152,7 +152,7 @@ format: html
         sumCorrect = true;
         
         document.getElementById('result-box').style.borderColor = 'green';
-        fingersRaised = currentSum;
+        document.getElementById('fingers-result').innerText = currentSum;
         document.getElementById('result-box').style.backgroundColor = 'lightgreen';
         
         setTimeout(() => {
