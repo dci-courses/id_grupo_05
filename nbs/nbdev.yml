@@ -2,8 +2,8 @@ project:
   output-dir: _docs
 
 website:
-  title: "suma"
-  site-url: "https://a.github.io/suma"
-  description: "a"
-  repo-branch: a
-  repo-url: "https://github.com/a/suma"
+  title: "id_grupo_05"
+  site-url: "https://dci-courses.github.io/id_grupo_05"
+  description: "Proyecto suma con manos."
+  repo-branch: main
+  repo-url: "https://github.com/dci-courses/id_grupo_05"
