@@ -1,0 +1,28 @@
+---
+title: "Bienvenida a la Aplicación de Sumas con los Dedos"
+format: html
+---
+
+# ¡Bienvenidos a la App de Sumas con los Dedos!
+
+Esta es una aplicación especial diseñada para ayudar a niños que están aprendiendo a sumar, facilitando el proceso de aprendizaje de una forma divertida y didactica. 
+
+¿Sabías que puedes usar tus manos para hacer sumas? ¡Aquí te enseñaremos cómo hacerlo!
+
+## ¿Cómo funciona?
+
+1. **Activa tu cámara**: La aplicación va a utilizar tu cámara para detectar tus manos. No te preocupes, no vamos a guardar ninguna imagen, solo necesitamos ver cuántos dedos estás levantando.
+
+2. **Levanta tus dedos**: La aplicación podrá ver cuántos dedos de cada mano tienes levantados. Por ejemplo, si levantas 3 dedos de una mano y 2 de la otra, la aplicación sabrá que 3 + 2 es igual a 5.
+
+3. **Mira el resultado**: Después de que la aplicación vea cuántos dedos tienes levantados, te dirá cuántos dedos has levantado en total, ¡y eso es una suma!
+
+## ¡Pruébalo!
+
+Levanta diferentes números de dedos y observa cómo la aplicación cuenta tus dedos para sumar. Intenta con diferentes combinaciones para practicar la suma.
+
+> Recuerda, esta aplicación es solo una herramienta para ayudarte a aprender. ¡Diviértete sumando y sigue practicando!
+
+## ¿Listo para empezar?
+
+Dirígete a la siguiente página para comenzar con la aplicación de detección de manos y empieza a sumar con tus dedos: [Ir a la aplicación de sumas](nbs\proyecto_suma\suma.qmd)

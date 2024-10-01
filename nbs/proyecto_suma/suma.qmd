@@ -6,7 +6,10 @@ format: html
 <div id="p5-sketch">
   <div id="canvas-container"></div>
 </div>
-
+<div id="result-box" style="display: inline-block; vertical-align: top; margin-left: 20px; padding: 10px; border: 2px solid #000; font-size: 24px;">
+  <strong>Suma de dedos levantados:</strong>
+  <div id="fingers-result" style="font-size: 36px; color: green;">0</div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
 
@@ -127,6 +130,7 @@ format: html
         }
       }
       console.log("Fingers raised: " + fingersRaised);
+      document.getElementById('fingers-result').innerText = fingersRaised;
     }
 
     function calculateDistance(p1, p2) {

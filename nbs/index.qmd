@@ -1,16 +1,19 @@
 ---
-title: "Bienvenido"
+title: "Bienvenido al repositorio del equipo 5"
 format: html
 ---
 
 
-Este sitio es del grupo 5
-
+Este sitio es del grupo 5, donde se pueden encontrar los trabajos realizados por sus integrantes, y usted podra probar ejecutando estos proyectos en tiempo real.
 
 
 ## Contenido del Libro de Datos
 
 A continuación, se muestra el contenido que ya hemos compilado en este libro. Haz clic en los enlaces para acceder a las diferentes secciones:
+
+## Aplicacion para facilitar el aprendizaje de la suma para niños
+
+[Suma con las manos](nbs\proyecto_suma\suma.qmd)
 
 
  
