@@ -7,11 +7,11 @@ format: html
   <div id="canvas-container"></div>
 </div>
 <div id="sum-box" style="display: inline-block; vertical-align: top; margin-right: 20px; padding: 10px; border: 2px solid #000; font-size: 24px;">
-  <strong>Suma aleatoria:</strong>
+  <strong>Suma:</strong>
   <div id="random-sum" style="font-size: 36px; color: blue;"></div>
 </div>
 <div id="result-box" style="display: inline-block; vertical-align: top; margin-left: 20px; padding: 10px; border: 2px solid #000; font-size: 24px;">
-  <strong>Suma de dedos levantados:</strong>
+  <strong>Resultado con los dedos:</strong>
   <div id="fingers-result" style="font-size: 36px; color: green;">0</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>

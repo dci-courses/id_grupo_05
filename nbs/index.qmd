@@ -1,5 +1,5 @@
 ---
-title: "Bienvenido al repositorio del equipo 5"
+title: "Bienvenido al repositorio del Grupo 5"
 format: html
 ---
 
@@ -7,13 +7,18 @@ format: html
 Este sitio es del grupo 5, donde se pueden encontrar los trabajos realizados por sus integrantes, y usted podra probar ejecutando estos proyectos en tiempo real.
 
 
-## Contenido del Libro de Datos
+## Contenido del Libro
 
 A continuación, se muestra el contenido que ya hemos compilado en este libro. Haz clic en los enlaces para acceder a las diferentes secciones:
 
 ## Aplicacion para facilitar el aprendizaje de la suma para niños
 
-[Suma con las manos](proyecto_suma/suma.qmd)
+
+![Papelografo realizado en clases](proyecto_suma/images_suma/papelografo.png){width=50% .center}
+
+[Link a la descripción del proyecto: Suma con las manos](proyecto_suma/introduccion.qmd)
+<br>
+[Link al proyecto: Suma con las manos](proyecto_suma/suma.qmd)
 
 
  

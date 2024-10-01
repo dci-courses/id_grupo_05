@@ -4,4 +4,5 @@ website:
       - index.qmd
       - section: proyecto_suma
         contents:
+          - proyecto_suma\introduccion.qmd
           - proyecto_suma\suma.qmd
