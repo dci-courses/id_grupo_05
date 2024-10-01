@@ -152,12 +152,12 @@ format: html
         sumCorrect = true;
         
         document.getElementById('result-box').style.borderColor = 'green';
+        fingersRaised = currentSum;
         document.getElementById('result-box').style.backgroundColor = 'lightgreen';
         
         setTimeout(() => {
           document.getElementById('result-box').style.borderColor = '#000';
           document.getElementById('result-box').style.backgroundColor = '#fff';
-          fingersRaised = currentSum;
           currentSum = generateRandomSum();
           document.getElementById('fingers-result').innerText = 0; 
           sumCorrect = false; 
