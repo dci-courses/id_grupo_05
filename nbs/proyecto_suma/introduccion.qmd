@@ -3,11 +3,15 @@ title: "Bienvenida a la Aplicación de Sumas con los Dedos"
 format: html
 ---
 
-# ¡Bienvenidos a la App de Sumas con los Dedos!
+## Decripción del problema
 
-Esta es una aplicación especial diseñada para ayudar a niños que están aprendiendo a sumar, facilitando el proceso de aprendizaje de una forma divertida y didactica. 
+Muchos padres no disponen del tiempo o la energía suficiente para jugar con sus hijos, lo que lleva a que los niños pequeños pasen largas horas frente a pantallas. Aunque los videos educativos a los que están expuestos pueden ser adecuados para su edad, a menudo carecen de suficiente interactividad, lo que afecta negativamente el aprendizaje de habilidades como la pronunciación de palabras o la comprensión de conceptos matemáticos.
 
-¿Sabías que puedes usar tus manos para hacer sumas? ¡Aquí te enseñaremos cómo hacerlo!
+El objetivo de este proyecto es desarrollar una aplicación que ofrezca retroalimentación interactiva en operaciones matemáticas como sumas, brindando a los niños una experiencia educativa más dinámica y efectiva.
+
+## Como abordaremos el problema
+
+Crearemos una aplicación que permitirá a los niños resolver sumas utilizando los dedos de sus manos. En la pantalla aparecerán distintas operaciones, y los niños podrán ingresar el resultado mostrando el número correcto con sus dedos. A continuación, te explicamos cómo usar la aplicación.
 
 ## ¿Cómo funciona?
 
