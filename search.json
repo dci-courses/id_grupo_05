@@ -1,0 +1,120 @@
+[
+  {
+    "objectID": "proyecto_suma/suma.html",
+    "href": "proyecto_suma/suma.html",
+    "title": "Suma con los dedos",
+    "section": "",
+    "text": "Suma:\n\n\n\n\n\nResultado con los dedos:\n\n0",
+    "crumbs": [
+      "proyecto_suma",
+      "Suma con los dedos"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bienvenido al repositorio del Grupo 5",
+    "section": "",
+    "text": "Este sitio es del grupo 5, donde se pueden encontrar los trabajos realizados por sus integrantes, y usted podra probar ejecutando estos proyectos en tiempo real.",
+    "crumbs": [
+      "Bienvenido al repositorio del Grupo 5"
+    ]
+  },
+  {
+    "objectID": "index.html#contenido-del-libro",
+    "href": "index.html#contenido-del-libro",
+    "title": "Bienvenido al repositorio del Grupo 5",
+    "section": "Contenido del Libro",
+    "text": "Contenido del Libro\nA continuación, se muestra el contenido que ya hemos compilado en este libro. Haz clic en los enlaces para acceder a las diferentes secciones:",
+    "crumbs": [
+      "Bienvenido al repositorio del Grupo 5"
+    ]
+  },
+  {
+    "objectID": "index.html#aplicacion-para-facilitar-el-aprendizaje-de-la-suma-para-niños",
+    "href": "index.html#aplicacion-para-facilitar-el-aprendizaje-de-la-suma-para-niños",
+    "title": "Bienvenido al repositorio del Grupo 5",
+    "section": "Aplicacion para facilitar el aprendizaje de la suma para niños",
+    "text": "Aplicacion para facilitar el aprendizaje de la suma para niños\n\n\n\nPapelografo realizado en clases\n\n\nLink a la descripción del proyecto: Suma con las manos  Link al proyecto: Suma con las manos",
+    "crumbs": [
+      "Bienvenido al repositorio del Grupo 5"
+    ]
+  },
+  {
+    "objectID": "proyecto_suma/introduccion.html",
+    "href": "proyecto_suma/introduccion.html",
+    "title": "Bienvenida a la Aplicación de Sumas con los Dedos",
+    "section": "",
+    "text": "Muchos padres no disponen del tiempo o la energía suficiente para jugar con sus hijos, lo que lleva a que los niños pequeños pasen largas horas frente a pantallas. Aunque los videos educativos a los que están expuestos pueden ser adecuados para su edad, a menudo carecen de suficiente interactividad, lo que afecta negativamente el aprendizaje de habilidades como la pronunciación de palabras o la comprensión de conceptos matemáticos.\nEl objetivo de este proyecto es desarrollar una aplicación que ofrezca retroalimentación interactiva en operaciones matemáticas como sumas, brindando a los niños una experiencia educativa más dinámica y efectiva.",
+    "crumbs": [
+      "proyecto_suma",
+      "Bienvenida a la Aplicación de Sumas con los Dedos"
+    ]
+  },
+  {
+    "objectID": "proyecto_suma/introduccion.html#decripción-del-problema",
+    "href": "proyecto_suma/introduccion.html#decripción-del-problema",
+    "title": "Bienvenida a la Aplicación de Sumas con los Dedos",
+    "section": "",
+    "text": "Muchos padres no disponen del tiempo o la energía suficiente para jugar con sus hijos, lo que lleva a que los niños pequeños pasen largas horas frente a pantallas. Aunque los videos educativos a los que están expuestos pueden ser adecuados para su edad, a menudo carecen de suficiente interactividad, lo que afecta negativamente el aprendizaje de habilidades como la pronunciación de palabras o la comprensión de conceptos matemáticos.\nEl objetivo de este proyecto es desarrollar una aplicación que ofrezca retroalimentación interactiva en operaciones matemáticas como sumas, brindando a los niños una experiencia educativa más dinámica y efectiva.",
+    "crumbs": [
+      "proyecto_suma",
+      "Bienvenida a la Aplicación de Sumas con los Dedos"
+    ]
+  },
+  {
+    "objectID": "proyecto_suma/introduccion.html#como-abordaremos-el-problema",
+    "href": "proyecto_suma/introduccion.html#como-abordaremos-el-problema",
+    "title": "Bienvenida a la Aplicación de Sumas con los Dedos",
+    "section": "Como abordaremos el problema",
+    "text": "Como abordaremos el problema\nCrearemos una aplicación que permitirá a los niños resolver sumas utilizando los dedos de sus manos. En la pantalla aparecerán distintas operaciones, y los niños podrán ingresar el resultado mostrando el número correcto con sus dedos. A continuación, te explicamos cómo usar la aplicación.",
+    "crumbs": [
+      "proyecto_suma",
+      "Bienvenida a la Aplicación de Sumas con los Dedos"
+    ]
+  },
+  {
+    "objectID": "proyecto_suma/introduccion.html#funcionalidades-inteligentes",
+    "href": "proyecto_suma/introduccion.html#funcionalidades-inteligentes",
+    "title": "Bienvenida a la Aplicación de Sumas con los Dedos",
+    "section": "Funcionalidades inteligentes",
+    "text": "Funcionalidades inteligentes\n\nDetección de la posición de las manos y dedos: Utilizamos el modelo de deteccion de manos de ml5 que permite de identificar y capturar las posiciones clave de las manos y los dedos. Esta funcion inteligente es la base que ocupamos para desarrollar la suma con las manos.\nIdentificación de dedos doblados o rectos: Usando la detección de posiciones proporcionada por el modelo, implementamos un cálculo de distancia entre la punta y el medio de un dedo para evaluar si un dedo está doblado o recto. Esta funcion inteligente nos permite interpretar la postura de los dedos basandonos en el modelo de deteccion inicial y gracias a esto logramos hacer realidad nuestro objetivo de sumar con las manos.",
+    "crumbs": [
+      "proyecto_suma",
+      "Bienvenida a la Aplicación de Sumas con los Dedos"
+    ]
+  },
+  {
+    "objectID": "proyecto_suma/introduccion.html#cómo-funciona",
+    "href": "proyecto_suma/introduccion.html#cómo-funciona",
+    "title": "Bienvenida a la Aplicación de Sumas con los Dedos",
+    "section": "¿Cómo funciona?",
+    "text": "¿Cómo funciona?\n\nActiva tu cámara: La aplicación va a utilizar tu cámara para detectar tus manos. No te preocupes, no vamos a guardar ninguna imagen, solo necesitamos ver cuántos dedos estás levantando.\nLevanta tus dedos: La aplicación podrá ver cuántos dedos de cada mano tienes levantados. Por ejemplo, si levantas 3 dedos de una mano y 2 de la otra, la aplicación sabrá que 3 + 2 es igual a 5.\nMira el resultado: Después de que la aplicación vea cuántos dedos tienes levantados, te dirá cuántos dedos has levantado en total, ¡y eso es una suma!",
+    "crumbs": [
+      "proyecto_suma",
+      "Bienvenida a la Aplicación de Sumas con los Dedos"
+    ]
+  },
+  {
+    "objectID": "proyecto_suma/introduccion.html#pruébalo",
+    "href": "proyecto_suma/introduccion.html#pruébalo",
+    "title": "Bienvenida a la Aplicación de Sumas con los Dedos",
+    "section": "¡Pruébalo!",
+    "text": "¡Pruébalo!\nLevanta diferentes números de dedos y observa cómo la aplicación cuenta tus dedos para sumar. Intenta con diferentes combinaciones para practicar la suma.\n\nRecuerda, esta aplicación es solo una herramienta para ayudarte a aprender. ¡Diviértete sumando y sigue practicando!",
+    "crumbs": [
+      "proyecto_suma",
+      "Bienvenida a la Aplicación de Sumas con los Dedos"
+    ]
+  },
+  {
+    "objectID": "proyecto_suma/introduccion.html#listo-para-empezar",
+    "href": "proyecto_suma/introduccion.html#listo-para-empezar",
+    "title": "Bienvenida a la Aplicación de Sumas con los Dedos",
+    "section": "¿Listo para empezar?",
+    "text": "¿Listo para empezar?\nDirígete a la siguiente página para comenzar con la aplicación de detección de manos y empieza a sumar con tus dedos: Ir a la aplicación de sumas",
+    "crumbs": [
+      "proyecto_suma",
+      "Bienvenida a la Aplicación de Sumas con los Dedos"
+    ]
+  }
+]
