@@ -13,6 +13,11 @@ El objetivo de este proyecto es desarrollar una aplicación que ofrezca retroali
 
 Crearemos una aplicación que permitirá a los niños resolver sumas utilizando los dedos de sus manos. En la pantalla aparecerán distintas operaciones, y los niños podrán ingresar el resultado mostrando el número correcto con sus dedos. A continuación, te explicamos cómo usar la aplicación.
 
+## Funcionalidades inteligentes
+
+- Detección de la posición de las manos y dedos: Utilizamos el modelo de deteccion de manos de ml5 que permite de identificar y capturar las posiciones clave de las manos y los dedos. Esta funcion inteligente es la base que ocupamos para desarrollar la suma con las manos.
+- Identificación de dedos doblados o rectos: Usando la detección de posiciones proporcionada por el modelo, implementamos un cálculo de distancia entre la punta y el medio de un dedo para evaluar si un dedo está doblado o recto. Esta funcion inteligente nos permite interpretar la postura de los dedos basandonos en el modelo de deteccion inicial y gracias a esto logramos hacer realidad nuestro objetivo de sumar con las manos.
+
 ## ¿Cómo funciona?
 
 1. **Activa tu cámara**: La aplicación va a utilizar tu cámara para detectar tus manos. No te preocupes, no vamos a guardar ninguna imagen, solo necesitamos ver cuántos dedos estás levantando.

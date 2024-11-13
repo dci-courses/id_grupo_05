@@ -2,7 +2,7 @@ project:
   output-dir: _docs
 
 website:
-  title: "Grupo 5"
+  title: "id_grupo_05"
   site-url: "https://dci-courses.github.io/id_grupo_05"
   description: "Proyecto suma con manos."
   repo-branch: main

@@ -2,7 +2,7 @@ website:
   sidebar:
     contents:
       - index.qmd
-      - section: Proyecto Suma
+      - section: proyecto_suma
         contents:
           - proyecto_suma\introduccion.qmd
           - proyecto_suma\suma.qmd
